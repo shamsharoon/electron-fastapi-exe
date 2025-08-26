@@ -10,8 +10,8 @@ function startBackend() {
   return new Promise((resolve, reject) => {
     try {
       const backendPath = is.dev
-        ? join(__dirname, '../../../backend/dist/main.exe') // might need to change this path
-        : join(process.resourcesPath, 'backend/main.exe') // prod env path
+        ? join(__dirname, '../../../backend/dist/main/main') // might need to change this path
+        : join(process.resourcesPath, 'backend/main') // prod env path
 
       backendProcess = spawn(backendPath, [], {
         detached: false,
